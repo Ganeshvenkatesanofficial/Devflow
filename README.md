@@ -6,6 +6,8 @@
 
 **Turn tickets into codebase-aware implementation runbooks — without leaving VS Code.**
 
+Built by **Ganesh Venkatesan**
+
 [![VS Code](https://img.shields.io/badge/VS%20Code-%5E1.85-blue?logo=visualstudiocode)](https://marketplace.visualstudio.com/)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
@@ -88,7 +90,7 @@ Search "DevFlow" → Install
 
 **From source:**
 ```bash
-git clone https://github.com/your-username/devflow
+git clone https://github.com/ganesh-venkatesan/devflow
 cd devflow
 npm install
 cd webview && npm install && npm run build && cd ..

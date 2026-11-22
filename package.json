@@ -3,21 +3,21 @@
   "displayName": "DevFlow — AI Runbooks from Tickets",
   "description": "Turn Jira, Azure DevOps and GitHub tickets into codebase-aware, AI-generated implementation runbooks — right inside VS Code.",
   "version": "1.0.0",
-  "publisher": "devflow",
+  "publisher": "ganeshvenkatesanofficial",
   "author": {
-    "name": "DevFlow",
-    "email": "ganesh.v@thunai.ai"
+    "name": "Ganesh Venkatesan",
+    "email": "ganeshvenkatesanofficial@gmail.com"
   },
   "license": "MIT",
   "icon": "icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/devflow"
+    "url": "https://github.com/ganesh-venkatesan/devflow"
   },
   "bugs": {
-    "url": "https://github.com/your-username/devflow/issues"
+    "url": "https://github.com/ganesh-venkatesan/devflow/issues"
   },
-  "homepage": "https://github.com/your-username/devflow#readme",
+  "homepage": "https://github.com/ganesh-venkatesan/devflow#readme",
   "engines": {
     "vscode": "^1.85.0"
   },
