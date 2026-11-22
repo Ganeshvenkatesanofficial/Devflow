@@ -1,0 +1,33 @@
+.git/**
+.gitignore
+.github/**
+.vscode/**
+.venv/**
+venv/**
+.env
+.devflow/**
+
+# Source we don't ship (bundled webview build is shipped instead)
+webview/src/**
+webview/public/**
+webview/node_modules/**
+webview/package-lock.json
+webview/package.json
+webview/README.md
+
+# Dev tooling
+webpack.config.js
+
+# Python build residue
+backend/__pycache__/**
+backend/**/__pycache__/**
+*.pyc
+*.pyo
+
+# Docs that don't belong in the .vsix
+MARKETPLACE.md
+CHANGELOG.md
+
+# Working files
+*.log
+*.vsix

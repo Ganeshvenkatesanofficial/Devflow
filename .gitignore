@@ -1,0 +1,12 @@
+node_modules/
+dist/
+webview/build/
+webview/node_modules/
+backend/__pycache__/
+backend/**/__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.devflow/
+*.vsix
