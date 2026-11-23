@@ -83,20 +83,79 @@ From there you can run any command in the integrated terminal with one click, co
 
 ## Install
 
-**From the VS Code Marketplace** (after publishing):
-```
-Search "DevFlow" → Install
+### Prerequisites (one-time, ~3 min)
+
+DevFlow has a small Python backend. You need these installed once:
+
+| Tool | Minimum | Check |
+|---|---|---|
+| **Python** | 3.11+ | `python3 --version` |
+| **pip** | any recent | `pip3 --version` |
+| **VS Code / Cursor / Windsurf / VSCodium** | any recent | — |
+
+Install the backend's Python dependencies (one command):
+
+```bash
+pip3 install --user fastapi==0.104.1 uvicorn==0.24.0 httpx==0.25.2 pydantic==2.5.2 \
+  python-dotenv==1.0.0 ollama==0.1.6 openai==1.6.1 anthropic==0.8.1 \
+  google-generativeai==0.3.2
 ```
 
-**From source:**
+That's it — the extension will auto-detect your Python interpreter on first launch. If you prefer a virtualenv, see *Advanced: custom Python* at the bottom.
+
+### Install DevFlow in your editor
+
+Pick your editor:
+
+**🟣 Cursor / Windsurf / VSCodium / Gitpod** (uses Open VSX by default)
+1. `Cmd/Ctrl+Shift+X` → Extensions sidebar
+2. Search **`DevFlow`**
+3. Click **Install** → reload
+4. DevFlow rocket icon appears in the activity bar ✅
+
+**🔵 VS Code** (uses Microsoft Marketplace — our extension is on Open VSX, so download the `.vsix` once)
+
+*Easiest — terminal:*
 ```bash
-git clone https://github.com/ganesh-venkatesan/devflow
-cd devflow
+curl -L -o devflow.vsix https://open-vsx.org/api/ganeshvenkatesanofficial/devflow-toolkit/1.0.0/file/ganeshvenkatesanofficial.devflow-toolkit-1.0.0.vsix
+code --install-extension devflow.vsix
+```
+
+*Or via the UI:*
+1. Download the `.vsix` from the [latest GitHub Release](https://github.com/Ganeshvenkatesanofficial/Devflow/releases/latest) or [Open VSX](https://open-vsx.org/extension/ganeshvenkatesanofficial/devflow-toolkit)
+2. In VS Code: `Cmd/Ctrl+Shift+P` → **Install from VSIX…** → select the file
+3. Reload VS Code
+4. DevFlow rocket icon appears in the activity bar ✅
+
+### First launch
+
+1. Click the **DevFlow rocket** 🚀 in the activity bar (left edge).
+2. The panel opens. On first run it spins up the local Python backend — takes 5–10 seconds, you'll see `Backend ready` in the Output channel.
+3. Add your provider credentials (Jira / Azure DevOps / GitHub) and pick an AI engine (OpenAI, Anthropic, Gemini, or local Ollama).
+4. Paste a ticket URL → **Generate Runbook**.
+
+### From source (contributors / to hack on it)
+
+```bash
+git clone https://github.com/Ganeshvenkatesanofficial/Devflow
+cd Devflow
 npm install
 cd webview && npm install && npm run build && cd ..
 python3 -m venv .venv && .venv/bin/pip install -r backend/requirements.txt
 ```
-Then press `F5` in VS Code to launch the Extension Development Host.
+Open the folder in VS Code and press **F5** to launch the Extension Development Host.
+
+### Advanced: custom Python
+
+If you don't want the extension to use the system Python, set `devflow.pythonPath` in your VS Code settings to a venv binary, e.g.:
+
+```json
+{
+  "devflow.pythonPath": "/Users/you/.venvs/devflow/bin/python"
+}
+```
+
+Then `pip install -r <path>/backend/requirements.txt` into that venv once.
 
 ---
 
