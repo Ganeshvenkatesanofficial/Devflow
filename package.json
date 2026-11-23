@@ -2,7 +2,7 @@
   "name": "devflow-toolkit",
   "displayName": "DevFlow — AI Runbooks from Tickets",
   "description": "Turn Jira, Azure DevOps and GitHub tickets into codebase-aware, AI-generated implementation runbooks — right inside VS Code.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "ganeshvenkatesanofficial",
   "author": {
     "name": "Ganesh Venkatesan",

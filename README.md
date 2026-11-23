@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="media/icon-128.png" alt="DevFlow" width="96" height="96" />
+<img src="https://raw.githubusercontent.com/Ganeshvenkatesanofficial/Devflow/main/media/icon-128.png" alt="DevFlow" width="96" height="96" />
 
 # DevFlow
 
