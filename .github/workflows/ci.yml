@@ -24,12 +24,12 @@ jobs:
           python-version: '3.11'
 
       - name: Install extension deps
-        run: npm ci
+        run: npm install --no-audit --no-fund
 
       - name: Install webview deps + build
         working-directory: webview
         run: |
-          npm ci
+          npm install --no-audit --no-fund
           npm run build
 
       - name: Install backend deps
